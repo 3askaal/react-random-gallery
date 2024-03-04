@@ -6,9 +6,9 @@ import { Gallery } from '../lib'
 import 'reset-css/reset.css'
 import 'normalize.css/normalize.css'
 
-const getNumber = () => Math.ceil(random(80, 250) / 10) * 10;
+const getNumber = () => Math.ceil(random(80, 200) / 10) * 10;
 
-const images = times(20, (index: number) => {
+const images = times(25, (index: number) => {
   const bg = randomcolor().replace('#', '');
   const w = getNumber();
   const h = getNumber();
@@ -30,9 +30,13 @@ const images = times(20, (index: number) => {
 });
 
 const App = () => {
+  const options = {
+    imageOffset: 10
+  }
+
   return (
-    <div>
-      <Gallery images={images} />
+    <div style={{ margin: '2rem', border: '1px solid grey' }}>
+      <Gallery images={images} options={options} />
     </div>
   )
 };
