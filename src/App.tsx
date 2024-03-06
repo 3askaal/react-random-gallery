@@ -8,7 +8,8 @@ import 'normalize.css/normalize.css'
 
 const getNumber = () => {
   const rangePerBreakpoint: [number, [number, number]][] = [
-    [0, [40, 160]],
+    [0, [20, 120]],
+    [320, [40, 160]],
     [768, [60, 200]],
     [1024, [80, 240]],
   ];
