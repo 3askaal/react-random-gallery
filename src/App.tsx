@@ -1,10 +1,8 @@
 import { times, random, last } from 'lodash';
 import randomcolor from 'randomcolor';
+import { Box, Stack, Typography } from '@mui/material';
 
 import { Gallery } from '../lib'
-
-import 'reset-css/reset.css'
-import 'normalize.css/normalize.css'
 
 const getNumber = () => {
   const rangePerBreakpoint: [number, [number, number]][] = [
@@ -34,16 +32,26 @@ const images = times(25, (index: number) => {
 const App = () => {
   const options = {
     imageOffset: 10,
-    galleryHeight: 'calc(100vh - 4rem)',
+    galleryHeight: '100%',
     animation: {
       duration: '.5s',
     }
   }
 
   return (
-    <div style={{ margin: '2rem', border: '1px solid grey' }}>
-      <Gallery images={images} options={options} />
-    </div>
+    <Box sx={{ display: 'flex', width: '100%', height: '100%' }}>
+      <Stack spacing={2} sx={{ width: '100%', height: '100%' }}>
+        <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+          <Stack spacing={2}>
+            <Typography variant="h3" component="h3">React Random Gallery</Typography>
+            <Box sx={{ display: 'inline-flex', alignSelf: 'center', padding: '.5rem .8rem', backgroundColor: 'lightgrey', borderRadius: '.25em' }}>npm i react-random-gallery</Box>
+          </Stack>
+        </Box>
+        <Box sx={{ border: '1px solid grey', flexGrow: 1, width: '100%', height: '100%' }}>
+          <Gallery images={images} options={options} />
+        </Box>
+      </Stack>
+    </Box>
   )
 };
 

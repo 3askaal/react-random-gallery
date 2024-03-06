@@ -32,8 +32,8 @@ export const Gallery: FC<GalleryProps> = ({ images, options }) => {
   }, [galleryRef.current])
 
   return (
-    <div ref={galleryRef}>
-      <SGallery height={options.galleryHeight || gallery.height}>
+    <div ref={galleryRef} style={{ height: options.galleryHeight || gallery.height }}>
+      <SGallery>
         <SGalleryBackdrop
           onClick={() => clearPreviewImage()}
           selected={selectedImageIndex !== null}

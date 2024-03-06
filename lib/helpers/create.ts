@@ -8,6 +8,10 @@ export const createGallery = async (el: HTMLDivElement, images: TImages, options
   let canvasHeight = options.galleryHeight ?
     Math.floor(el.getBoundingClientRect().height || 0) : 500
 
+
+    console.log('canvasWidth: ', canvasWidth);
+    console.log('canvasHeight: ', canvasHeight);
+
   const maxTries = 2000
   let tries = 0
 
