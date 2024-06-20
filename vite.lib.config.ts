@@ -28,7 +28,8 @@ export default defineConfig(() => ({
           'styled-components': 'styled',
           rooks: 'rooks',
           lodash: 'lodash'
-        }
+        },
+        interop: 'auto'
       }
     }
   }
