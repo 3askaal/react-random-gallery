@@ -80,13 +80,12 @@
     "typescript": "^5.2.2",
     "vite": "^5.1.4",
     "vite-plugin-dts": "^3.7.3",
+    "vite-plugin-externals": "^0.6.2",
     "vitest": "^1.4.0"
   },
   "peerDependencies": {
-    "lodash": "^4.17.21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "rooks": "^7.14.1",
     "styled-components": "^6.1.8"
   }
 }
