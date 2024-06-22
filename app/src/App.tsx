@@ -1,6 +1,6 @@
 import { useMemo } from 'react'
 import { useDebouncedValue, useWindowSize } from 'rooks'
-import { Gallery, TOptions } from '../lib'
+import { Gallery, TOptions } from '../../src'
 import { getImages } from './helpers'
 import { GlobalStyle, colors } from './style'
 

@@ -1,4 +1,4 @@
-import { FC, useRef, useState } from 'react'
+import React from 'react'
 import { useAsyncEffect } from 'rooks'
 import { SGallery, SGalleryBackdrop } from './Gallery.styled'
 import { GalleryItem } from './GalleryItem'
@@ -10,10 +10,10 @@ type GalleryProps = {
   options?: TOptions;
 }
 
-export const Gallery: FC<GalleryProps> = ({ images, options }) => {
-  const galleryRef = useRef<HTMLDivElement>(null)
-  const [gallery, setGallery] = useState<{ height: number, width: number, images?: TPlacedImage[] }>({ height: 500, width: 500 })
-  const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null)
+export const Gallery: React.FC<GalleryProps> = ({ images, options }) => {
+  const galleryRef = React.useRef<HTMLDivElement>(null)
+  const [gallery, setGallery] = React.useState<{ height: number, width: number, images?: TPlacedImage[] }>({ height: 500, width: 500 })
+  const [selectedImageIndex, setSelectedImageIndex] = React.useState<number | null>(null)
 
   const previewImage = (index: number) => {
     setSelectedImageIndex(index)

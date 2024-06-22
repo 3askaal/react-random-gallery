@@ -23,21 +23,10 @@ export default defineConfig(() => ({
   build: {
     sourcemap: true,
     lib: {
-      entry: resolve(__dirname, 'lib/index.ts'),
+      entry: resolve(__dirname, 'src/index.ts'),
       name: 'react-random-gallery',
       formats: ['es', 'umd'],
       fileName: (format) => `react-random-gallery.${format}.js`
     }
-    // rollupOptions: {
-    //   external: ['react', 'react-dom', 'styled-components'],
-    //   output: {
-    //     globals: {
-    //       react: 'React',
-    //       'react-dom': 'ReactDOM',
-    //       'styled-components': 'styled'
-    //     },
-    //     interop: 'auto'
-    //   }
-    // }
   }
 }))
